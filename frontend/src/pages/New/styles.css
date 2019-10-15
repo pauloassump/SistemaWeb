@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 label#thumbnail {
     margin-bottom: 20px;
     border: 1px dashed #ddd;
@@ -19,4 +20,27 @@ label#thumbnail.has-thumbnail {
 
 label#thumbnail.has-thumbnail img {
     display: none;
+=======
+label#thumbnail {
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+label#thumbnail input {
+    display: none;
+}
+
+label#thumbnail.has-thumbnail {
+    border: 0;
+}
+
+label#thumbnail.has-thumbnail img {
+    display: none;
+>>>>>>> 570682830a7e0049bcea187dca3a264e7ab87bc9
 }
