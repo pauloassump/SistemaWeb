@@ -3,13 +3,13 @@ import api from '../../services/api';
 
 //import axios from 'axios';
 
-export default function Login() {
+export default function Login({ history }) {
     const [email, setEmail] = useState('');
 
     async function handleSubmit(event) {
       event.preventDefault();
   
-      const response = await api.post('/sessions', { email });
+      const response = await api.post('http://localhost:3333/sessions', { email });
      
       /*const response = await axios({
         url:'http://localhost:3333/sessions', 
@@ -22,6 +22,8 @@ export default function Login() {
      const { _id } = response.data;
   
      localStorage.setItem('user', _id);
+
+     history.push('/dashboard');
   
     }
 
