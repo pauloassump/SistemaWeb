@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-//import api from '../../services/api';
+import api from '../../services/api';
 
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -9,19 +9,19 @@ export default function Login() {
     async function handleSubmit(event) {
       event.preventDefault();
   
-      //const response = await api.post('/sessions', { email });
-      
-      const response = await axios({
+      const response = await api.post('/sessions', { email });
+     
+      /*const response = await axios({
         url:'http://localhost:3333/sessions', 
         headers: {}, 
         method : 'post',
         data : {
           email : email
         } 
-      });
-      const { _id } = response.data;
+      });    TESTE */ 
+     const { _id } = response.data;
   
-      localStorage.setItem('user', _id);
+     localStorage.setItem('user', _id);
   
     }
 
